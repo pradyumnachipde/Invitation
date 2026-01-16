@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ramp Walk Invitation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+        background: linear-gradient(120deg, #e3f2fd, #f3e5f5, #e8f5e9);
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #333;
+    }
+
+    section {
+        width: 100%;
+        padding: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .content {
+        max-width: 520px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .box {
+        background: #ffffff;
+        padding: 45px 35px;
+        border-radius: 20px;
+        box-shadow:
+            0 10px 25px rgba(0,0,0,0.08),
+            0 0 0 6px rgba(79,124,255,0.05);
+        animation: fadeIn 0.8s ease;
+    }
+
+    h1 {
+        font-size: 2.2rem;
+        font-weight: 600;
+        background: linear-gradient(90deg, #4f7cff, #6a11cb);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    h2 {
+        margin-top: 28px;
+        font-size: 1.5rem;
+        font-weight: 500;
+        color: #444;
+    }
+
+    p {
+        margin-top: 16px;
+        font-size: 1.05rem;
+        line-height: 1.7;
+        color: #555;
+    }
+
+    .buttons {
+        margin-top: 32px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 14px;
+    }
+
+    button {
+        min-width: 160px;
+        padding: 14px 24px;
+        font-size: 1rem;
+        border-radius: 30px;
+        border: none;
+        cursor: pointer;
+        transition: all 0.25s ease;
+    }
+
+    .accept {
+        background: linear-gradient(135deg, #4f7cff, #5a8dff);
+        color: #fff;
+    }
+
+    .accept:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 18px rgba(79,124,255,0.35);
+    }
+
+    .decline {
+        background: #f0f0f0;
+        color: #333;
+    }
+
+    .decline:hover {
+        background: #e0e0e0;
+        transform: translateY(-3px);
+    }
+
+    .result {
+        margin-top: 26px;
+        font-size: 1.2rem;
+        display: none;
+    }
+
+    .yes-text {
+        color: #2e7d32;
+    }
+
+    .no-text {
+        color: #555;
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @media (max-width: 600px) {
+        h1 {
+            font-size: 1.9rem;
+        }
+        h2 {
+            font-size: 1.35rem;
+        }
+        p {
+            font-size: 0.95rem;
+        }
+    }
+</style>
+
+        
+</head>
+<body>
+
+    <body>
+
+<section>
+    <div class="box content">
+        <h1>Comienzo 2025-26</h1>
+        <p>
+            A day of confidence, elegance, and memorable first impressions.
+        </p>
+
+        <h2 style="margin-top: 30px;">A Small Request</h2>
+        <p>
+            I would be honored if you would consider being my partner  
+             at our Fresher's event.
+        </p>
+
+        <div class="buttons">
+            <button class="accept" onclick="accept()">I’d be happy to</button>
+            <button class="decline" onclick="decline()">No, thank you</button>
+        </div>
+
+        <div class="result yes-text" id="yesResult">
+            Thank you. I truly appreciate it!😃
+        </div>
+
+        <div class="result no-text" id="noResult">
+            Thank you for your honesty. It's okay😊.
+        </div>
+    </div>
+</section>
+
+<script>
+    function accept() {
+        document.getElementById("yesResult").style.display = "block";
+        document.getElementById("noResult").style.display = "none";
+    }
+
+    function decline() {
+        document.getElementById("noResult").style.display = "block";
+        document.getElementById("yesResult").style.display = "none";
+    }
+</script>
+
+</body>
+
+
+</body>
+</html>
